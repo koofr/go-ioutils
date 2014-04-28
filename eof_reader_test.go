@@ -2,8 +2,8 @@ package ioutils_test
 
 import (
 	"bytes"
+	. "git.koofr.lan/go-ioutils.git"
 	"io"
-	. "ioutils"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
