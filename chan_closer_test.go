@@ -2,7 +2,7 @@ package ioutils_test
 
 import (
 	"bytes"
-	. "git.koofr.lan/go-ioutils.git"
+	. "github.com/koofr/go-ioutils"
 	"io/ioutil"
 
 	. "github.com/onsi/ginkgo"

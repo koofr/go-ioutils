@@ -1,7 +1,7 @@
 package ioutils_test
 
 import (
-	. "git.koofr.lan/go-ioutils.git"
+	. "github.com/koofr/go-ioutils"
 	"os"
 
 	. "github.com/onsi/ginkgo"

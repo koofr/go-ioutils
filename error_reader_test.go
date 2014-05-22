@@ -2,7 +2,7 @@ package ioutils_test
 
 import (
 	"errors"
-	. "git.koofr.lan/go-ioutils.git"
+	. "github.com/koofr/go-ioutils"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
