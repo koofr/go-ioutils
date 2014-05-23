@@ -1,5 +1,5 @@
 go-ioutils
-=============
+==========
 
 Go I/O utils.
 
