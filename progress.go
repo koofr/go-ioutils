@@ -1,7 +1,7 @@
 package ioutils
 
 import (
-	"github.com/bancek/pb"
+	"github.com/koofr/pb"
 	"io"
 )
 
