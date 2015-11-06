@@ -4,6 +4,7 @@ import (
 	"bytes"
 	. "github.com/koofr/go-ioutils"
 	"io/ioutil"
+	"runtime"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -35,6 +36,8 @@ var _ = Describe("ChanCloser", func() {
 
 		err = r.Close()
 		Expect(err).NotTo(HaveOccurred())
+
+		runtime.Gosched()
 
 		Expect(isDone).To(BeTrue())
 	})
