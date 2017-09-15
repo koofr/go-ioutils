@@ -2,9 +2,10 @@ package ioutils_test
 
 import (
 	"bytes"
-	. "github.com/koofr/go-ioutils"
 	"io/ioutil"
 	"runtime"
+
+	. "github.com/koofr/go-ioutils"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -33,6 +34,11 @@ var _ = Describe("ChanCloser", func() {
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(isDone).To(BeFalse())
+
+		err = r.Close()
+		Expect(err).NotTo(HaveOccurred())
+
+		runtime.Gosched()
 
 		err = r.Close()
 		Expect(err).NotTo(HaveOccurred())
