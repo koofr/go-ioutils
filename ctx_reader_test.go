@@ -11,7 +11,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-var _ = FDescribe("CtxReader", func() {
+var _ = Describe("CtxReader", func() {
 	It("should stop reading when the context is canceled", func() {
 		br := bytes.NewReader([]byte{0, 1, 2, 3, 4})
 
