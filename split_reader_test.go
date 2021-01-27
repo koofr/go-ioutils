@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	. "github.com/koofr/go-ioutils"
 	"io"
 	"io/ioutil"
 	"sync"
@@ -12,6 +11,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+
+	. "github.com/koofr/go-ioutils"
 )
 
 func checkOneByte(r io.Reader, expected byte) {

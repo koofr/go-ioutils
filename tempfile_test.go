@@ -1,11 +1,12 @@
 package ioutils_test
 
 import (
-	. "github.com/koofr/go-ioutils"
 	"os"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+
+	. "github.com/koofr/go-ioutils"
 )
 
 var _ = Describe("TempFile", func() {

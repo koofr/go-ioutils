@@ -5,10 +5,10 @@ import (
 	"io/ioutil"
 	"runtime"
 
-	. "github.com/koofr/go-ioutils"
-
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+
+	. "github.com/koofr/go-ioutils"
 )
 
 var _ = Describe("ChanCloser", func() {

@@ -2,10 +2,11 @@ package ioutils_test
 
 import (
 	"bytes"
-	. "github.com/koofr/go-ioutils"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+
+	. "github.com/koofr/go-ioutils"
 )
 
 var _ = Describe("StartReader", func() {

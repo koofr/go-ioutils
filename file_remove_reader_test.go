@@ -1,12 +1,13 @@
 package ioutils_test
 
 import (
-	. "github.com/koofr/go-ioutils"
 	"io/ioutil"
 	"os"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+
+	. "github.com/koofr/go-ioutils"
 )
 
 var _ = Describe("FileRemoveReader", func() {

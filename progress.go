@@ -1,8 +1,9 @@
 package ioutils
 
 import (
-	"github.com/koofr/pb"
 	"io"
+
+	"github.com/koofr/pb"
 )
 
 type ReaderAtSeeker interface {

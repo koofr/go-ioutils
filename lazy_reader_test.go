@@ -3,11 +3,12 @@ package ioutils_test
 import (
 	"bytes"
 	"errors"
-	. "github.com/koofr/go-ioutils"
 	"io"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+
+	. "github.com/koofr/go-ioutils"
 )
 
 var _ = Describe("LazyReader", func() {
