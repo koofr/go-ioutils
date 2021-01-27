@@ -7,4 +7,5 @@ require (
 	github.com/koofr/pb v0.0.0-20200512084736-1389bea13f8d
 	github.com/onsi/ginkgo v1.14.2
 	github.com/onsi/gomega v1.10.3
+	golang.org/x/time v0.0.0-20201208040808-7e3f01d25324
 )
