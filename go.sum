@@ -16,8 +16,6 @@ github.com/google/go-cmp v0.4.0/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
 github.com/koofr/go-cryptoutils v0.0.0-20151104083704-fe224388747f h1:gIGkmbVGurfwh12Cng+9wEMJrNr5sliN+eqniEpJh4w=
 github.com/koofr/go-cryptoutils v0.0.0-20151104083704-fe224388747f/go.mod h1:55h7D++0OBwGe7lXoI6sXj1rcjttP3XYvUvoGzRuZhA=
-github.com/koofr/pb v0.0.0-20200512084736-1389bea13f8d h1:vyWfdsOEs9xbsrrrVHUvbD3GUGYGVv1l8o2jDkHsNow=
-github.com/koofr/pb v0.0.0-20200512084736-1389bea13f8d/go.mod h1:ujpLybcBpDfIhg4kX2jRznnIVW3w3dxKxoXzDTN45aM=
 github.com/nxadm/tail v1.4.4 h1:DQuhQpB1tVlglWS2hLQ5OV6B5r8aGxSrPc5Qo6uTN78=
 github.com/nxadm/tail v1.4.4/go.mod h1:kenIhsEOeOJmVchQTgglprH7qJGnHDVpk1VPCcaMI8A=
 github.com/onsi/ginkgo v1.6.0/go.mod h1:lLunBs/Ym6LB5Z9jYTR76FiuTmxDTDusOGeTQH+WWjE=
