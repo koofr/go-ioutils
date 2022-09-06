@@ -3,7 +3,7 @@ package ioutils_test
 import (
 	"bytes"
 	"context"
-	"io"
+	"io/ioutil"
 	"sync"
 	"time"
 
@@ -67,7 +67,7 @@ var _ = Describe("SharedLimiter", func() {
 		It("should limit the reader", func() {
 			l := NewSharedLimiter(10 * 1024)
 
-			r := NewSharedThrottledReader(ctx, io.NopCloser(bytes.NewReader(make([]byte, 1024*1024))), l)
+			r := NewSharedThrottledReader(ctx, ioutil.NopCloser(bytes.NewReader(make([]byte, 1024*1024))), l)
 
 			var wg sync.WaitGroup
 			wg.Add(2)

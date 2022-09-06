@@ -12,6 +12,7 @@ import (
 const sharedBurstLimit = 1000 * 1000 * 1000
 
 type SharedLimiter struct {
+	bytesPerSec  int64
 	limiter      *rate.Limiter
 	limiterMutex sync.RWMutex
 }
@@ -25,7 +26,8 @@ func NewSharedLimiter(bytesPerSec int64) *SharedLimiter {
 	}
 
 	return &SharedLimiter{
-		limiter: limiter,
+		bytesPerSec: bytesPerSec,
+		limiter:     limiter,
 	}
 }
 
@@ -41,18 +43,24 @@ func (l *SharedLimiter) WaitN(ctx context.Context, n int) (err error) {
 	return limiter.WaitN(ctx, n)
 }
 
-func (l *SharedLimiter) SetLimit(newBytesPerSecond int64) {
+func (l *SharedLimiter) GetLimit() int64 {
+	return l.bytesPerSec
+}
+
+func (l *SharedLimiter) SetLimit(newBytesPerSec int64) {
 	l.limiterMutex.Lock()
 	defer l.limiterMutex.Unlock()
 
-	if newBytesPerSecond == 0 {
+	l.bytesPerSec = newBytesPerSec
+
+	if newBytesPerSec == 0 {
 		l.limiter = nil
 	} else {
 		if l.limiter == nil {
-			l.limiter = rate.NewLimiter(rate.Limit(newBytesPerSecond), sharedBurstLimit)
+			l.limiter = rate.NewLimiter(rate.Limit(newBytesPerSec), sharedBurstLimit)
 			l.limiter.AllowN(time.Now(), sharedBurstLimit) // spend initial burst
 		} else {
-			l.limiter.SetLimit(rate.Limit(newBytesPerSecond))
+			l.limiter.SetLimit(rate.Limit(newBytesPerSec))
 		}
 	}
 }
