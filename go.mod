@@ -3,7 +3,6 @@ module github.com/koofr/go-ioutils
 go 1.18
 
 require (
-	github.com/koofr/go-cryptoutils v0.0.0-20151104083704-fe224388747f
 	github.com/onsi/ginkgo v1.16.4
 	github.com/onsi/gomega v1.27.1
 	golang.org/x/time v0.3.0
